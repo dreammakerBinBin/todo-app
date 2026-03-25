@@ -36,6 +36,7 @@
 - TypeScript 编译错误修复
 - Tailwind CSS v4 PostCSS 配置问题
 - 未使用变量警告
+- Android APK 构建问题（内存不足、JDK 版本、Capacitor sync）
 
 ## 子 Agent 使用的技能
 

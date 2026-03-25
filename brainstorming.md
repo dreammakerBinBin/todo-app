@@ -96,6 +96,21 @@ export default {
 
 **解决：** 删除未使用的类型声明和变量。
 
+### 问题 5：Gradle 内存不足崩溃
+**描述：** 系统内存不足（15GB 物理内存被其他程序占用），Gradle daemon 崩溃。
+
+**解决：** 关闭其他程序释放内存后重试。
+
+### 问题 6：JDK 版本不兼容
+**描述：** Capacitor Android 8.13.0 要求 `sourceCompatibility JavaVersion.VERSION_21`，JDK 17 不支持。
+
+**解决：** 安装 JDK 21。
+
+### 问题 7：Capacitor libs 目录缺失
+**描述：** `npx cap add android` 后 libs 目录不存在。
+
+**解决：** 运行 `npx cap sync android` 重新同步。
+
 ## 代码统计
 
 | 文件 | 行数 |

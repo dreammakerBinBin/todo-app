@@ -44,3 +44,36 @@
 - **网页版：** https://dreammakerBinBin.github.io/todo-app/
 - **GitHub 仓库：** https://github.com/dreammakerBinBin/todo-app
 - **gh-pages 分支：** 用于 GitHub Pages 部署
+
+## [1.0.1] - 2026-03-25
+
+### Android APK 打包
+
+#### 新增
+
+- Android APK 构建成功
+- APK 文件：`todo-app-debug.apk`（4.1MB）
+- 应用包名：`com.todo.app`
+
+#### 遇到的问题和解决方案
+
+**问题 1：系统内存不足**
+- 描述：Gradle daemon 因内存不足崩溃（15GB 物理内存被其他程序占用）
+- 解决：关闭其他程序后重试
+
+**问题 2：JDK 版本不兼容**
+- 描述：Capacitor Android 8.13.0 要求 Java 21，但 JDK 17 不支持 sourceCompatibility 21
+- 解决：安装 JDK 21（华为镜像下载）
+
+**问题 3：Capacitor libs 目录缺失**
+- 描述：`node_modules\@capacitor\android\capacitor\libs` 不存在
+- 解决：运行 `npx cap sync android` 重新同步
+
+#### 环境配置
+
+| 工具 | 版本 | 路径 |
+|------|------|------|
+| JDK | 21.0.2 | E:\work\haungbb\jdk21\jdk-21.0.2 |
+| Gradle | 8.14.3 | Android SDK 内置 |
+| Android SDK | - | C:\Users\admin\AppData\Local\Android\sdk |
+| AGP | 8.13.0 | Capacitor 依赖 |
