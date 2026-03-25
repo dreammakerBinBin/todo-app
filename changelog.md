@@ -77,3 +77,16 @@
 | Gradle | 8.14.3 | Android SDK 内置 |
 | Android SDK | - | C:\Users\admin\AppData\Local\Android\sdk |
 | AGP | 8.13.0 | Capacitor 依赖 |
+
+## [1.0.2] - 2026-03-25
+
+### Bug 修复
+
+**问题：Android APK 空白页面**
+- 描述：APK 安装后打开是空白页面，资源加载失败
+- 原因：`vite.config.ts` 的 `base: '/todo-app/'` 使用绝对路径，Android 无法识别
+- 解决：将 base 改为 `'./'` 使用相对路径
+
+### 重新构建 APK
+- APK 文件：`todo-app-debug.apk`（4.2MB）
+- 重新同步 dist 到 android assets
