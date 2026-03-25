@@ -90,3 +90,20 @@
 ### 重新构建 APK
 - APK 文件：`todo-app-debug.apk`（4.2MB）
 - 重新同步 dist 到 android assets
+
+## [1.0.3] - 2026-03-25
+
+### Bug 修复
+
+**问题 1：GitHub Pages 和 Android 构建路径冲突**
+- 描述：GitHub Pages 需要 `base: '/todo-app/'`，Android 需要 `base: './'`
+- 解决：Vite 配置检测 `CAPACITOR` 环境变量，为 Android 设置相对路径
+
+**问题 2：GitHub Actions 部署权限不足**
+- 描述：`peaceiris/actions-gh-pages@v3` 推送被拒绝 (403)
+- 原因：GitHub Actions 默认没有写权限
+- 解决：在 workflow 添加 `permissions: contents: write`
+
+### 文档更新
+- 更新 deploy.yml 添加权限配置
+- 更新 vite.config.ts 支持多平台构建
