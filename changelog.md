@@ -38,3 +38,9 @@
 
 - 新增文件：11 个
 - 总代码行数：~1007 行
+
+#### 部署信息
+
+- **网页版：** https://dreammakerBinBin.github.io/todo-app/
+- **GitHub 仓库：** https://github.com/dreammakerBinBin/todo-app
+- **gh-pages 分支：** 用于 GitHub Pages 部署

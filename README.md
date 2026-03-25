@@ -28,6 +28,12 @@
 | 存储 | localStorage |
 | 打包 | Capacitor |
 
+## 在线访问
+
+**网页版：** https://dreammakerBinBin.github.io/todo-app/
+
+> 已部署到 GitHub Pages，可直接在手机浏览器中打开使用。
+
 ## 快速开始
 
 ### 安装依赖
